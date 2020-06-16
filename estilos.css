@@ -1,0 +1,26 @@
+.fondonegro {
+  background-color: #000;
+  color: #fff;
+}
+
+.cajas {
+  border: #000 solid 2px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.vertical {
+  transform: rotate(-90deg);
+}
+
+.lineax {
+  border-bottom: #000 solid 4px;
+}
+
+.lineay {
+  border-right: #000 solid 4px;
+}
+
+.masmargin {
+  margin-top: 8rem;
+}

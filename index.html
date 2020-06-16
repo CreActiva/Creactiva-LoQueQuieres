@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="estilos.css">
+  <title>Lo Que Quieres</title>
+</head>
+<body>
+  <div class="container">
+    <!--Row 1-->
+    <div class="row text-center fondonegro">
+      <div class="col-lg-12 pt-3 pb-3">
+        <h3>LO QUE NO QUIERES</h3>
+      </div>
+    </div>
+    <!--Row 2-->
+    <div class="row text-center">
+      <div class="col-lg-1 fondonegro"><!--Col vacia--></div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-3 mt-5 p-1 fondonegro">
+        <h4>LO QUE DESEAS<br> ELIMINAR</h4>
+      </div>
+      <div class="col-lg-1 lineay"><!--Col vacia--></div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-3 mt-5 p-1 fondonegro">
+        <h4>LO QUE DESEAS<br> EVITAR</h4>
+      </div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-1 fondonegro"><!--Col vacia--></div>
+    </div>
+    <!--Row 3-->
+    <div class="row text-center lineax">
+      <div class="col-lg-1 fondonegro"><h4 class="vertical masmargin">TIENES</h4></div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-3 mb-5 cajas">
+        
+        <div id="app" class="container mt-1 mb-2">
+          <input type="text" class="form-control my-3" v-model="nuevaTarea" v-on:keyup.enter="agregarTarea">
+          <button class="btn btn-primary" @click="agregarTarea">Agregar</button>
+          <div class="mt-3" v-for="(item, index) of tareas">
+            <div role="alert" :class="['alert', item.estado ? 'alert-success' : 'alert-danger']">
+              <div class="d-flex justify-content-between align-items-center">
+      
+                <div>
+                  - {{item.nombre}}
+                </div>
+                <div>
+                  <button class="btn btn-danger btn-sm" @click="eliminar(index)">X</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-1 lineay"><!--Col vacia--></div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-3 mb-5 cajas">
+        
+        <div id="app" class="container mt-1 mb-2">
+          <input type="text" class="form-control my-3" v-model="nuevaTarea" v-on:keyup.enter="agregarTarea">
+          <button class="btn btn-primary" @click="agregarTarea">Agregar</button>
+          <div class="mt-3" v-for="(item, index) of tareas">
+            <div role="alert" :class="['alert', item.estado ? 'alert-success' : 'alert-danger']">
+              <div class="d-flex justify-content-between align-items-center">
+      
+                <div>
+                  - {{item.nombre}}
+                </div>
+                <div>
+                  <button class="btn btn-danger btn-sm" @click="eliminar(index)">X</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-1 fondonegro"><h4 class="vertical masmargin">NO&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TIENES</h4></div>
+    </div>
+    <!--Row 4-->
+    <div class="row text-center">
+      <div class="col-lg-1 fondonegro"><h4 class="vertical">QUE</h4></div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-3 mt-5 p-1 fondonegro">
+        <h4>LO QUE DESEAS<br> CONSERVAR</h4>
+      </div>
+      <div class="col-lg-1 lineay"><!--Col vacia--></div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-3 mt-5 p-1 fondonegro">
+        <h4>LO QUE DESEAS<br> LOGRAR</h4>
+      </div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-1 fondonegro"><h4 class="vertical">QUE</h4></div>
+    </div>
+    <!--Row 5-->
+    <div class="row text-center">
+      <div class="col-lg-1 fondonegro"><h4 class="vertical">LO</h4></div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-3 mb-5 cajas">
+        
+        <div id="app" class="container mt-1 mb-2">
+          <input type="text" class="form-control my-3" v-model="nuevaTarea" v-on:keyup.enter="agregarTarea">
+          <button class="btn btn-primary" @click="agregarTarea">Agregar</button>
+          <div class="mt-3" v-for="(item, index) of tareas">
+            <div role="alert" :class="['alert', item.estado ? 'alert-success' : 'alert-danger']">
+              <div class="d-flex justify-content-between align-items-center">
+      
+                <div>
+                  - {{item.nombre}}
+                </div>
+                <div>
+                  <button class="btn btn-danger btn-sm" @click="eliminar(index)">X</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-1 lineay"><!--Col vacia--></div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-3 mb-5 cajas">
+        
+        <div id="app" class="container mt-1 mb-2">
+          <input type="text" class="form-control my-3" v-model="nuevaTarea" v-on:keyup.enter="agregarTarea">
+          <button class="btn btn-primary" @click="agregarTarea">Agregar</button>
+          <div class="mt-3" v-for="(item, index) of tareas">
+            <div role="alert" :class="['alert', item.estado ? 'alert-success' : 'alert-danger']">
+              <div class="d-flex justify-content-between align-items-center">
+      
+                <div>
+                  - {{item.nombre}}
+                </div>
+                <div>
+                  <button class="btn btn-danger btn-sm" @click="eliminar(index)">X</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-1"><!--Col vacia--></div>
+      <div class="col-lg-1 fondonegro"><h4 class="vertical">LO</h4></div>
+    </div>
+    <!--Row 6-->
+    <div class="row text-center fondonegro">
+      <div class="col-lg-12 pt-3 pb-3">
+        <h3>LO QUE QUIERES</h3>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
